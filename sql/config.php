@@ -2,11 +2,11 @@
 
 $dbhost = "localhost";
 
-$dbuser = "root";
+$dbuser = "kamrul";
 
-$dbpass = "";
+$dbpass = "12345678";
 
-$dbname = "newspaper";
+$dbname = "code_newspaper";
 
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass) or die ('Error connecting to mysql');
 

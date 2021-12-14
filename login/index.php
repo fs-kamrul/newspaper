@@ -72,11 +72,15 @@
             // we now check to see whether the passwords match by hashing the submitted password
             // and comparing it to the hashed version already stored in the database.
             $check_password = hash('sha256', $_POST['password'] . $row['salt']);
+
             for($round = 0; $round < 65536; $round++)
             {
                 $check_password = hash('sha256', $check_password . $row['salt']);
             }
-            
+//print($check_password);
+//print('<br>');
+//print($row['password']);
+//exit();
             if($check_password === $row['password'])
             {
                 // If they do, then we flip this to true
